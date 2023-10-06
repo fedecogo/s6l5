@@ -1,5 +1,5 @@
 #nav {
-  background: linear-gradient(to bottom, black, rgb(136, 29, 29)) !important;
+  background: linear-gradient(to bottom, black, #141414) !important;
   position: sticky;
   top: 0px;
   z-index: 10;
@@ -7,4 +7,30 @@
 
 body {
   background-color: #141414;
+}
+
+aside {
+  margin-right: 20px;
+}
+
+#uno {
+  background-color: #666666;
+  padding: 3px 10px;
+  color: white;
+}
+
+#due {
+  background-color: #333333;
+  color: white;
+  border: 1px solid black;
+}
+
+#tre {
+  background-color: #141414;
+  color: #666666;
+  border: 1px solid white;
+}
+
+#dropdown {
+  background-color: black;
 }/*# sourceMappingURL=profilo.css.map */

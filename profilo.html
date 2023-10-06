@@ -41,14 +41,24 @@
                 />
               </aside>
               <div class="text-start">
-                <p>Strive Students</p>
+                <p id="uno">Strive Students</p>
                 <h5>Lenguage:</h5>
-                <button>English</button>
+                <div  class="dropdown">
+                    <button id="dropdown" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      English
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Italiano</a></li>
+                      <li><a class="dropdown-item" href="#">Albanese</a></li>
+                      <li><a class="dropdown-item" href="#">Russo</a></li>
+                      <li><a class="dropdown-item" href="#">Irlandese</a></li>
+                    </ul>
+                  </div>
                 <hr />
                 <h5>Maturity Settings</h5>
-                <button>ALL MATURITY RATINGS</button>
+                <button id="due">ALL MATURITY RATINGS</button>
                 <p>Show titles of all maturity rating for this profile</p>
-                <button>EDIT</button>
+                <button id="tre">EDIT</button>
                 <hr />
                 <h5>Autoplay Controls</h5>
                 <div>
@@ -81,10 +91,10 @@
             </div>
           </div>
           <div class="col-12">
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary">SAVE</button>
-                <button type="button" class="btn btn-outline-primary">CANCEL</button>
-                <button type="button" class="btn btn-outline-primary">DELATE PROFILO</button>
+            <div >
+                <button type="button" class="btn btn-outline-secondary">SAVE</button>
+                <button type="button" class="btn btn-outline-secondary">CANCEL</button>
+                <button type="button" class="btn btn-outline-danger">DELATE PROFILO</button>
               </div>
           </div>
         </div>
