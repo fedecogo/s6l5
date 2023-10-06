@@ -10,10 +10,11 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="HOME.css" />
   </head>
   <body>
     <!-- navbar inzio -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <img src="assets/Netflix-assets/assets/netflix_logo.png" width="10%" />
         <button
@@ -30,31 +31,60 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a
+                class="nav-link active text-secondary"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tv Show</a>
+              <a class="nav-link text-secondary" href="#">Tv Show</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Movies</a>
+              <a class="nav-link text-secondary" href="#">Movies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Recently Added</a>
+              <a class="nav-link text-secondary" href="#">Recently Added</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My List</a>
+              <a class="nav-link text-secondary" href="#">My List</a>
             </li>
           </ul>
           <form class="d-flex align-items-center" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <a class="nav-link" href="#">KIDS</a>
-            <a class="nav-link" href="#">icona campanella</a>
-            <a class="nav-link" href="#">menu a tendita account</a>
+            <a class="text-white ms-1"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                /></svg
+            ></a>
+            <a class="nav-link text-white ms-2" href="#">
+              <img src="assets/Netflix-assets/assets/kids_icon.png" width="40px" height="40px">
+
+            </a>
+            <a class="text-white ms-2"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bell-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"
+                /></svg
+            ></a>
+            <img src="assets/Netflix-assets/assets/avatar.png" width="40px" height="40px" class="nav-link text-white ms-2 me-5" href="#"
+              ></a
+            >
           </form>
         </div>
       </div>
@@ -62,56 +92,77 @@
     <!-- Navbar fine -->
     <main>
       <!-- inizio primo div -->
-      <div class="container">
+      <div id="primo_div" class="container">
         <div class="row d-flex flex-row">
-          <div class="col-6 d-flex flex-row">
+          <div class="col-8 d-flex flex-row">
             <h2>TV Show</h2>
-            <button>Generi</button>
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Generi
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Horror</a></li>
+                <li><a class="dropdown-item" href="#">Documentary</a></li>
+                <li><a class="dropdown-item" href="#">Comdey</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6"><button>ciao</button><button>ciao</button></div>
+          <div class="col-2 offset-2 d-flex ">
+            <div id="svg">
+              <img src="./assets/Netflix-assets/library.png" alt="" width="30px" height="30px">
+            </div>
+            <div id="svg2">
+              
+              <img src="./assets/Netflix-assets/zoom.png" alt="" width="30px" height="30px">
+              
+            </div>
+          </div>
         </div>
       </div>
       <!-- fine primo div -->
       <hr />
       <!-- inizo Prima slide -->
-      <div>
+      <div id="prima_slide">
         <h3>Trending Now</h3>
         <div id="carouselExampleFade" class="carousel slide carousel-fade">
           <div class="carousel-inner">
+            <!-- prima -->
             <div class="carousel-item active">
+              <!-- prima -->
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media3.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media1.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media2.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media0.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media4.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media5.webp"
                       width="100%"
@@ -123,39 +174,39 @@
             <div class="carousel-item">
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media6.jpg"
+                      src="assets/Netflix-assets/assets/media/media32.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media7.webp"
+                      src="assets/Netflix-assets/assets/media/media31.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media8.webp"
+                      src="assets/Netflix-assets/assets/media/media30.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media9.jpg"
+                      src="assets/Netflix-assets/assets/media/media29.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media10.jpg"
+                      src="assets/Netflix-assets/assets/media/media28.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media11.jpg"
+                      src="assets/Netflix-assets/assets/media/media27.jpg"
                       width="100%"
                     />
                   </div>
@@ -165,45 +216,46 @@
             <div class="carousel-item">
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media6.jpg"
+                      src="assets/Netflix-assets/assets/media/media3.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media7.webp"
+                      src="assets/Netflix-assets/assets/media/media1.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media8.webp"
+                      src="assets/Netflix-assets/assets/media/media2.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media9.jpg"
+                      src="assets/Netflix-assets/assets/media/media0.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media10.jpg"
+                      src="assets/Netflix-assets/assets/media/media4.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media11.jpg"
+                      src="assets/Netflix-assets/assets/media/media5.webp"
                       width="100%"
                     />
                   </div>
                 </div>
               </div>
             </div>
+            
           </div>
           <button
             class="carousel-control-prev"
@@ -230,40 +282,41 @@
         <h3>Watch It Again</h3>
         <div id="carouselExample" class="carousel slide">
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item">
+              <!-- prima -->
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media3.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media1.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media2.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media0.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media4.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media5.webp"
                       width="100%"
@@ -272,42 +325,42 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item active">
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media6.jpg"
+                      src="assets/Netflix-assets/assets/media/media32.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media7.webp"
+                      src="assets/Netflix-assets/assets/media/media31.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media8.webp"
+                      src="assets/Netflix-assets/assets/media/media30.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media9.jpg"
+                      src="assets/Netflix-assets/assets/media/media29.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media10.jpg"
+                      src="assets/Netflix-assets/assets/media/media28.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media11.jpg"
+                      src="assets/Netflix-assets/assets/media/media27.jpg"
                       width="100%"
                     />
                   </div>
@@ -317,39 +370,39 @@
             <div class="carousel-item">
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media6.jpg"
+                      src="assets/Netflix-assets/assets/media/media3.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media7.webp"
+                      src="assets/Netflix-assets/assets/media/media1.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media8.webp"
+                      src="assets/Netflix-assets/assets/media/media2.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media9.jpg"
+                      src="assets/Netflix-assets/assets/media/media0.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media10.jpg"
+                      src="assets/Netflix-assets/assets/media/media4.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media11.jpg"
+                      src="assets/Netflix-assets/assets/media/media5.webp"
                       width="100%"
                     />
                   </div>
@@ -404,40 +457,41 @@
             ></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item">
+              <!-- prima -->
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media3.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media1.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media2.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media0.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media4.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media5.webp"
                       width="100%"
@@ -446,42 +500,42 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item active">
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
+                    <img
+                      src="assets/Netflix-assets/assets/media/media16.webp"
+                      width="100%"
+                    />
+                  </div>
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
+                    <img
+                      src="assets/Netflix-assets/assets/media/media14.webp"
+                      width="100%"
+                    />
+                  </div>
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
+                    <img
+                      src="assets/Netflix-assets/assets/media/media3.webp"
+                      width="100%"
+                    />
+                  </div>
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
                       src="assets/Netflix-assets/assets/media/media6.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media7.webp"
+                      src="assets/Netflix-assets/assets/media/media13.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media8.webp"
-                      width="100%"
-                    />
-                  </div>
-                  <div class="col-2">
-                    <img
-                      src="assets/Netflix-assets/assets/media/media9.jpg"
-                      width="100%"
-                    />
-                  </div>
-                  <div class="col-2">
-                    <img
-                      src="assets/Netflix-assets/assets/media/media10.jpg"
-                      width="100%"
-                    />
-                  </div>
-                  <div class="col-2">
-                    <img
-                      src="assets/Netflix-assets/assets/media/media11.jpg"
+                      src="assets/Netflix-assets/assets/media/media19.webp"
                       width="100%"
                     />
                   </div>
@@ -491,39 +545,39 @@
             <div class="carousel-item">
               <div class="container text-center">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-12 col-md-3 col-lg-2 p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media6.jpg"
+                      src="assets/Netflix-assets/assets/media/media3.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media7.webp"
+                      src="assets/Netflix-assets/assets/media/media1.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media8.webp"
+                      src="assets/Netflix-assets/assets/media/media2.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-block col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media9.jpg"
+                      src="assets/Netflix-assets/assets/media/media0.webp"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media10.jpg"
+                      src="assets/Netflix-assets/assets/media/media4.jpg"
                       width="100%"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="d-none col-md-3 d-md-none col-lg-2 d-lg-block p-1">
                     <img
-                      src="assets/Netflix-assets/assets/media/media11.jpg"
+                      src="assets/Netflix-assets/assets/media/media5.webp"
                       width="100%"
                     />
                   </div>
@@ -554,97 +608,104 @@
     </main>
 
     <!-- inzio footer -->
-    <div class="container">
-      <footer class="py-5">
-        <div class="row">
-          <div class="col-6 col-md-2 mb-3 mt-3">
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"
-                  >Audio and Subtitles</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Media Center</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Privacy</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-md-2 mb-3 mt-3">
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"
-                  >Audio Description</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"
-                  >Investor Relations</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Legal Notices</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-md-2 mb-3 mt-3">
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Help Center</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Jobs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"
-                  >Coockie Preferences</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-2 mb-3 mt-3">
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Gift Cards</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Terms of Use</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"
-                  >Corporate Information</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-5 offset-md-1 mb-3 w-50">
-            <form>
-              <div class="d-flex flex-column flex-sm-row w-50">
-                <input
-                  id="newsletter1"
-                  type="text"
-                  class="form-control"
-                  placeholder="Service Code"
-                />
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <div class="container">
+            <footer class="py-5 text-white">
+              <div class="row">
+                <div class="col-6 col-md-2 mb-3 mt-3">
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 "
+                        >Audio and Subtitles</a
+                      >
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Media Center</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Privacy</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+      
+                <div class="col-6 col-md-2 mb-3 mt-3">
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 "
+                        >Audio Description</a
+                      >
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 "
+                        >Investor Relations</a
+                      >
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Legal Notices</a>
+                    </li>
+                  </ul>
+                </div>
+      
+                <div class="col-6 col-md-2 mb-3 mt-3">
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Help Center</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Jobs</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 "
+                        >Coockie Preferences</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3 mt-3">
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Gift Cards</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 ">Terms of Use</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 "
+                        >Corporate Information</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+      
+                <div class="col-md-5 offset-md-1 mb-3 w-50">
+                  <form>
+                    <div class="d-flex flex-column flex-sm-row w-50">
+                      <input
+                        id="newsletter1"
+                        type="text"
+                        class="form-control"
+                        placeholder="Service Code"
+                      />
+                    </div>
+                  </form>
+                </div>
               </div>
-            </form>
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+              >
+                <p>&copy; 1997-2019 Netflix, Inc. {i-0d00fcda2fdt9c0de}</p>
+              </div>
+            </footer>
           </div>
         </div>
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
-        >
-          <p>&copy; 1997-2019 Netflix, Inc. {i-0d00fcda2fdt9c0de}</p>
-        </div>
-      </footer>
+      </div>
     </div>
+    
     <!-- fine footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
