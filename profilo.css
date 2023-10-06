@@ -5,6 +5,10 @@
   z-index: 10;
 }
 
+h1 {
+  color: white;
+}
+
 body {
   background-color: #141414;
 }
